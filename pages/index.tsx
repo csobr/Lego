@@ -1,15 +1,16 @@
-import { OrbitControls, PerspectiveCamera, Sky } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
-const Model = dynamic(() => import('../model/Lego_world'));
+const Model = dynamic(() => import('../model/Lego_world'), {
+  ssr: false
+});
 
 const Home = () => {
   return (
     <div className="scene">
       <Canvas>
-        <directionalLight />
         <OrbitControls />
         <directionalLight intensity={1} />
         <Suspense fallback={null}>
