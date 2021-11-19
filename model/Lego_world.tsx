@@ -328,10 +328,10 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
         rotation={[0, -Math.PI / 2, 0]}
       />
       <mesh geometry={nodes.mesh_0.geometry}>
-        <meshBasicMaterial reflectivity={1} color="white" envMap={texture} />
+        <meshBasicMaterial reflectivity={0.5} color="e7eaef" envMap={texture} />
       </mesh>
       <mesh geometry={nodes.mesh_1.geometry} material={nodes.mesh_1.material}>
-        <meshBasicMaterial reflectivity={1} color="white" envMap={texture} />
+        <meshBasicMaterial reflectivity={0.5} color="e7eaef" envMap={texture} />
       </mesh>
     </group>
   );
