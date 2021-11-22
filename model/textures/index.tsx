@@ -1,11 +1,2 @@
-import * as THREE from 'three';
-export const texture = new THREE.CubeTextureLoader()
-  .setPath('img/')
-  .load([
-    'front.jpg',
-    'back.jpg',
-    'top.jpg',
-    'bottom.jpg',
-    'left.jpg',
-    'right.jpg'
-  ]);
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
+export const texture = new RGBELoader().setPath('img/').load('map.hdr');

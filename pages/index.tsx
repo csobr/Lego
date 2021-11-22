@@ -21,8 +21,7 @@ const CameraControls = () => {
 const Home = () => {
   return (
     <div className="scene">
-      <Canvas>
-        <ambientLight />
+      <Canvas linear>
         <CameraControls />
         <Suspense fallback={null}>
           <Model position={[0, 0, 0]} />

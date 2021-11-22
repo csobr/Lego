@@ -8,6 +8,44 @@ body {
   padding: 0;
   width: 100vw;
   height: 100%;
+  background: conic-gradient(
+      from 180deg at 50% 50%,
+      #ffffff 0deg,
+      #000000 40deg,
+      #ffffff 90deg,
+      #000000 140deg,
+      #ffffff 180deg,
+      #000000 225deg,
+      #ffffff 270deg,
+      #000000 300deg,
+      #ffffff 360deg,
+      #000000 400deg
+    ),
+    conic-gradient(
+      from 180deg at 50% 50%,
+      #ffffff 0deg,
+      #000000 40deg,
+      #ffffff 90deg,
+      #000000 140deg,
+      #ffffff 180deg,
+      #000000 225deg,
+      #ffffff 270deg,
+      #000000 300deg,
+      #ffffff 360deg,
+      #000000 400deg
+    ),
+    url('/noise.svg'),
+    radial-gradient(
+      93.8% 93.8% at 31.01% 3.48%,
+      #e7eaef 0%,
+      #e4e2ed 21.88%,
+      #dde7e8 39.01%,
+      #d7e0f1 57.81%,
+      #e7eaef 78.52%,
+      #daddf0 100%
+    );
+  background-blend-mode: screen, difference, normal;
+  mix-blend-mode: normal;
 }
 .scene {
   width: 100vw;
