@@ -17,6 +17,7 @@ type ActionName = 'animation_0';
 type GLTFActions = Record<ActionName, THREE.AnimationAction>;
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
+  texture.mapping = THREE.EquirectangularReflectionMapping;
   const group = useRef<THREE.Group>();
   const { nodes, materials, animations } = useGLTF(
     '/lego_world-transformed.glb'
@@ -328,10 +329,24 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
         rotation={[0, -Math.PI / 2, 0]}
       />
       <mesh geometry={nodes.mesh_0.geometry}>
-        <meshBasicMaterial reflectivity={0.5} color="e7eaef" envMap={texture} />
+        <meshPhysicalMaterial
+          roughness={0.2}
+          emissive="#000"
+          reflectivity={1}
+          metalness={1}
+          color="#D7E0F1"
+          envMap={texture}
+        />
       </mesh>
       <mesh geometry={nodes.mesh_1.geometry} material={nodes.mesh_1.material}>
-        <meshBasicMaterial reflectivity={0.5} color="e7eaef" envMap={texture} />
+        <meshPhysicalMaterial
+          roughness={0.2}
+          emissive="#000"
+          reflectivity={1}
+          metalness={1}
+          color="#D7E0F1"
+          envMap={texture}
+        />
       </mesh>
     </group>
   );
